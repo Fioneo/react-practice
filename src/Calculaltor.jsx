@@ -29,7 +29,7 @@ function Calculator() {
   const lastChar = input[input.length - 1]
 
   setInput(prev => {
-    if (prev.length >= 18) return prev
+    if (prev.length > 14) return prev
 
     if (prev === '0' && !operators.includes(value) && value !== '.') {
       return value
@@ -72,12 +72,7 @@ function Calculator() {
           <button className="clear" onClick={() => onHandleClick('C')}>C</button>
         </div>
       </div>
-      <div className="technologies-used">
-        <p>
-          <strong>Technologies used:</strong> React, JSX, CSS Modules, JavaScript (useState, events
-          handling)
-        </p>
-      </div>
+    
     </div>
   );
 }
